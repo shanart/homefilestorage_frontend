@@ -1,0 +1,28 @@
+.dashboard-nav {
+    height: 50px;
+}
+
+.dashboard {
+    height: calc(100% - 50px);
+    display: flex;
+
+    &-content,
+    &-sidebar {
+        height: 100%;
+    }
+
+    &-sidebar {
+        width: 10rem;
+    }
+
+    &-content {
+        width: calc(100% - 10rem);
+        overflow-y: auto;
+    }
+}
+
+.user-avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}

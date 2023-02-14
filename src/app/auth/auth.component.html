@@ -1,0 +1,14 @@
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <form class="card" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="card-body">
+            <h5 class="mb-3">login</h5>
+            <div class="mb-3">
+                <input type="email" placeholder="email" class="form-control form-control-sm" formControlName="email">
+            </div>
+            <div class="mb-3">
+                <input type="password" placeholder="password" class="form-control form-control-sm" formControlName="password">
+            </div>
+            <button type="submit" class="btn btn-sm btn-info" [disabled]="!loginForm.valid">login</button>
+        </div>
+    </form>
+</div>

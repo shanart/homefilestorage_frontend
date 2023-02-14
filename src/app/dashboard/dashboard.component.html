@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary dashboard-nav">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">file storage</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="https://cdn2.iconfinder.com/data/icons/avatars-99/62/avatar-370-456322-512.png" alt="" class="user-avatar">
+                        username
+                    </a>
+                    <ul class="dropdown-menu account-dropdown">
+                        <li><a class="dropdown-item" href="#">settigs</a></li>
+                        <li><button class="dropdown-item" (click)="switch_theme()">theme ({{theme}})</button></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><button class="dropdown-item" (click)="sign_out()">logout</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="dashboard">
+    <div class="dashboard-sidebar bg-body-secondary border-end d-flex flex-column justify-content-between">
+        <div class="list-group rounded-0">
+            <a class="list-group-item bg-transparent border-end-0" href="#">files</a>
+            <a class="list-group-item bg-transparent border-end-0" href="#">motes</a>
+        </div>
+        <div class="list-group rounded-0">
+            <button (click)="sign_out()" class="list-group-item text-start bg-transparent">logout</button>
+        </div>
+    </div>
+    <div class="dashboard-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
