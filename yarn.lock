@@ -1358,6 +1358,13 @@
   resolved "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
+"@ngrx/data@^15.3.0":
+  version "15.3.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/data/-/data-15.3.0.tgz#c99d9f6dba97f3cc846042d4c3f4eb446fffba19"
+  integrity sha512-hc/BUtfJpX8YGL2TPztTqHG1z+wTPM7CxQuswVZTo34gs3lH9yNyqmxeyEEv5O4jvLPXK4MrACHSNzRFTVpX3g==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngrx/router-store@15.3.0":
   version "15.3.0"
   resolved "https://registry.npmjs.org/@ngrx/router-store/-/router-store-15.3.0.tgz"
