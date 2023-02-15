@@ -8,3 +8,11 @@ export interface StorageFile {
     parent: number | null
     created_at: string
 }
+
+export interface StorageFolder {
+    id: number
+    name: string
+    public: boolean
+    parent: number | null
+    created_at: string
+}

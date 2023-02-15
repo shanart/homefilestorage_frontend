@@ -6,14 +6,17 @@
             <th scope="col">mime_type</th>
             <th scope="col">size</th>
             <th scope="col">public</th>
-            <th scope="col">parent</th>
             <th scope="col">created_at</th>
         </tr>
     </thead>
     <tbody>
+        <tr storage_folder_item class="storage_file_item"
+            *ngFor="let folder of folders"
+            [folder]="folder"
+        ></tr>
         <tr storage_file_item class="storage_file_item"
             *ngFor="let file of files"
             [file]="file"
-            ></tr>
+        ></tr>
     </tbody>
 </table>

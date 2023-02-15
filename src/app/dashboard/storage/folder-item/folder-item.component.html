@@ -1,0 +1,12 @@
+<td>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" [value]="folder.id" [id]="('folder-item' + folder.id)" (click)="select()">
+    </div>
+</td>
+<td>
+    <a [routerLink]="[]" [queryParams]="{parent: folder.id}">{{ folder.name }}</a>
+</td>
+<td></td>
+<td></td>
+<td>true</td>
+<td>{{ folder.created_at }}</td>

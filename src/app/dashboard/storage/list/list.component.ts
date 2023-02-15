@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { StorageFile } from '../models';
+import { StorageFile, StorageFolder } from '../models';
 
 @Component({
   selector: 'app-list',
@@ -8,4 +8,5 @@ import { StorageFile } from '../models';
 })
 export class ListComponent {
     @Input() files: StorageFile[];
+    @Input() folders: StorageFolder[];
 }

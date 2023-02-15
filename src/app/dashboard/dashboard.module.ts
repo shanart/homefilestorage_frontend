@@ -8,6 +8,8 @@ import { ItemComponent } from './storage/item/item.component';
 import { SearchComponent } from './storage/search/search.component';
 import { StorageService } from "./storage/services/storage.service";
 import { FilterComponent } from './storage/filter/filter.component';
+import { FolderItemComponent } from './storage/folder-item/folder-item.component';
+import { RouterModule } from "@angular/router";
 
 @NgModule({
     declarations: [
@@ -16,10 +18,12 @@ import { FilterComponent } from './storage/filter/filter.component';
         ListComponent,
         ItemComponent,
         SearchComponent,
-        FilterComponent
+        FilterComponent,
+        FolderItemComponent
     ],
     imports: [
         CommonModule,
+        RouterModule,
         DashboardRouterModule
     ],
     providers: [

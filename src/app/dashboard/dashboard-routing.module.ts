@@ -5,7 +5,7 @@ import { StorageComponent } from './storage/storage.component';
 
 const routes: Routes = [
     { path: "", component: DashboardComponent, children: [
-        {path: "", component: StorageComponent}   
+        {path: "", component: StorageComponent}
     ]}
 ];
 
