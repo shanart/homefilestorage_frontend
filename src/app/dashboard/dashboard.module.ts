@@ -10,6 +10,8 @@ import { StorageService } from "./storage/services/storage.service";
 import { FilterComponent } from './storage/filter/filter.component';
 import { FolderItemComponent } from './storage/folder-item/folder-item.component';
 import { RouterModule } from "@angular/router";
+import { ReactiveFormsModule } from "@angular/forms";
+
 
 @NgModule({
     declarations: [
@@ -24,6 +26,7 @@ import { RouterModule } from "@angular/router";
     imports: [
         CommonModule,
         RouterModule,
+        ReactiveFormsModule,
         DashboardRouterModule
     ],
     providers: [

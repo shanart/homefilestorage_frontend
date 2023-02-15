@@ -1,3 +1,10 @@
+<!-- Create Folder modal trigger -->
+<div class="mb-3">
+    <button type="button" class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createFolder">
+        create modal
+    </button>
+</div>
+
 <table class="table table-hover table-bordered">
     <thead>
         <tr>
@@ -10,14 +17,27 @@
         </tr>
     </thead>
     <tbody>
-        <tr storage_folder_item class="storage_file_item"
-            *ngFor="let folder of folders"
-            [folder]="folder"
-            (getParent)="onGetParent($event)"
-        ></tr>
-        <tr storage_file_item class="storage_file_item"
-            *ngFor="let file of files"
-            [file]="file"
-        ></tr>
+        <tr storage_folder_item class="storage_file_item" *ngFor="let folder of folders" [folder]="folder"
+            (getParent)="onGetParent($event)"></tr>
+        <tr storage_file_item class="storage_file_item" *ngFor="let file of files" [file]="file"></tr>
     </tbody>
 </table>
+
+<!-- Create Folder Modal -->
+<div class="modal fade" id="createFolder" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Create Modal</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" placeholder="Folder name">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

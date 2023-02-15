@@ -1,12 +1,25 @@
 <h5>types</h5>
-<div class="form-check form-switch" *ngFor="let type of filetypes">
-    <input class="form-check-input" type="checkbox" role="switch" [id]="type">
-    <label class="form-check-label" [for]="type">{{ type }}</label>
-</div>
 
-<hr>
+<form [formGroup]="filterForm" (ngSubmit)="onSubmit()">
+    <div class="form-check form-switch" *ngFor="let type of filetypes">
+        <input class="form-check-input" type="checkbox" role="switch" [id]="type" formControlName="types"
+            (change)="onSubmit()">
+        <label class="form-check-label" [for]="type">{{ type }}</label>
+    </div>
 
-<h5>ordering</h5>
-<select class="form-select" aria-label="Default select example">
-    <option *ngFor="let option of ordering" [value]="option">{{ option }}</option>
-</select>
+    <hr>
+
+    <h5>ordering</h5>
+    <select class="form-select" formControlName="ordering">
+        <option *ngFor="let option of ordering" [value]="option">{{ option }}</option>
+    </select>
+
+    <hr>
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-sm btn-info">accept</button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-sm btn-outline-secondary" (click)="clear()">clear</button>
+    </div>
+</form>
