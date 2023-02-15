@@ -1,0 +1,14 @@
+<div class="container-fluid pt-3">
+    <app-search></app-search>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="sticky-top">
+                <app-filter></app-filter>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <app-list [files]="files$ | async"></app-list>
+        </div>
+    </div>
+
+</div>

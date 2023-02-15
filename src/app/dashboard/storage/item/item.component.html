@@ -1,0 +1,11 @@
+<td>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" [value]="file.id" [id]="('flexCheckDefault' + file.id)" (click)="select()">
+    </div>
+</td>
+<td>{{ file.name}} </td>
+<td>{{ file.mime_type}} </td>
+<td>{{ file.size}} </td>
+<td>{{ file.public}} </td>
+<td>{{ file.parent}} </td>
+<td>{{ file.created_at}} </td>

@@ -1,0 +1,19 @@
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">mime_type</th>
+            <th scope="col">size</th>
+            <th scope="col">public</th>
+            <th scope="col">parent</th>
+            <th scope="col">created_at</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr storage_file_item class="storage_file_item"
+            *ngFor="let file of files"
+            [file]="file"
+            ></tr>
+    </tbody>
+</table>
