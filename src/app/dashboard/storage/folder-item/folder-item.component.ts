@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { StorageFolder } from '../models';
 
 @Component({
@@ -8,6 +8,7 @@ import { StorageFolder } from '../models';
 })
 export class FolderItemComponent implements OnInit {
     @Input() folder: StorageFolder;
+    @Output() getParent: EventEmitter<number> = new EventEmitter<number>();
 
     ngOnInit() {
 
@@ -15,5 +16,9 @@ export class FolderItemComponent implements OnInit {
 
     select() {
         
+    }
+
+    onGetParent() {
+        this.getParent.emit(this.folder.id);
     }
 }

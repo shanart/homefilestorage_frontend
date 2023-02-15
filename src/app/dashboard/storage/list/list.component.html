@@ -13,6 +13,7 @@
         <tr storage_folder_item class="storage_file_item"
             *ngFor="let folder of folders"
             [folder]="folder"
+            (getParent)="onGetParent($event)"
         ></tr>
         <tr storage_file_item class="storage_file_item"
             *ngFor="let file of files"

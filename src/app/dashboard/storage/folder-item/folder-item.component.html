@@ -4,7 +4,7 @@
     </div>
 </td>
 <td>
-    <a [routerLink]="[]" [queryParams]="{parent: folder.id}">{{ folder.name }}</a>
+    <button type="button" class="btn btn-sm btn-link" (click)="onGetParent()">{{ folder.name }}</button>
 </td>
 <td></td>
 <td></td>

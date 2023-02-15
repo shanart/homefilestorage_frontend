@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { StorageFile, StorageFolder } from './models';
@@ -12,20 +12,37 @@ import { StorageService } from './services/storage.service';
 })
 export class StorageComponent implements OnInit {
 
-    parent: number | null = null;
+    parent: Observable<number|null> = null;
     files$: Observable<StorageFile[]>;
     folders$: Observable<StorageFolder[]>;
+    activatedRoute: ActivatedRoute;
 
     constructor(private storageService: StorageService,
-                private route: ActivatedRoute) { }
+                private route: ActivatedRoute,
+                private router: Router) { }
 
     ngOnInit(): void {
-        console.log(this.parent);
+        this.route.queryParams.subscribe(params => {
+            console.log(params['parent']);
+            if (params['parent'])
+                this.parent = params['parent'];
+        });
 
         this.route.queryParamMap.subscribe(
             data => data.get('parent')? this.parent = +data.get('parent'): this.parent = null
         );
-        this.files$ = this.storageService.getFiles(this.parent);
+        this.files$ = this.storageService.getFiles(this.parent.pipe);
         this.folders$ = this.storageService.getFolders(this.parent);
+        this.activatedRoute = this.route;
+    }
+
+    onGetParent(id) {
+        this.files$ = this.storageService.getFiles(id);
+        this.folders$ = this.storageService.getFolders(id);
+        this.router.navigate([], {
+            relativeTo: this.activatedRoute,
+            queryParams: { parent: id },
+            queryParamsHandling: 'merge'
+        })
     }
 }
