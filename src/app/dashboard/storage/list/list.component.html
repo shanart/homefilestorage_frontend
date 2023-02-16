@@ -1,8 +1,14 @@
 <!-- Create Folder modal trigger -->
 <div class="mb-3">
-    <button type="button" class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#createFolder">
-        create modal
+    <button type="button" class="btn btn-sm btn-info me-3" data-bs-toggle="modal" data-bs-target="#createFolder">
+        create folder
+        <fa-icon [icon]="icon_folder" class="ms-1"></fa-icon>
     </button>
+
+    <a class="btn btn-sm btn-success" [routerLink]="['upload']">
+        upload
+        <fa-icon [icon]="icon_upload" class="ms-1"></fa-icon>
+    </a>
 </div>
 
 <table class="table table-hover table-bordered">

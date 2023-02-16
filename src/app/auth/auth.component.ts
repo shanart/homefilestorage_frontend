@@ -17,6 +17,6 @@ export class AuthComponent {
     constructor(private router: Router) { }
 
     onSubmit() {
-        this.router.navigate(['/']);
+        this.router.navigate(['/dashboard']);
     }
 }

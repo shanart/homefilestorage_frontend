@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { StorageFile } from '../models';
+import { StorageFile } from '../../models';
 
 @Component({
   selector: 'tr[storage_file_item]',

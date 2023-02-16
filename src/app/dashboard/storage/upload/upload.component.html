@@ -1,0 +1,64 @@
+<div class="container-fluid mt-3">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h3 class="mb-0">Upload File</h3>
+        <a [routerLink]="['']" class="btn btn-sm btn-outline-secondary">
+            <fa-icon [icon]="back_icon"></fa-icon>
+            Back to files
+        </a>
+    </div>
+
+    <form>
+        <div class="mb-3">
+            <input type="file" multiple class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <p>Files to upload:</p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="d-flex">
+                        <img src="assets/img01.png" alt="preview" style="width: 3rem" class="me-3">
+                        <div>Network in Nutshell.pdf</div>
+                        <div class="ms-auto">3.4 Mb</div>
+                        <div class="ms-3">
+                            <button class="btn btn-sm btn-outline-danger">
+                                <fa-icon [icon]="remove_icon"></fa-icon>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex">
+                        <img src="assets/img02.png" alt="preview" style="width: 3rem" class="me-3">
+                        <div>National Geography.pdf</div>
+                        <div class="ms-auto">5.1 Mb</div>
+                        <div class="ms-3">
+                            <button class="btn btn-sm btn-outline-danger">
+                                <fa-icon [icon]="remove_icon"></fa-icon>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex">
+                        <img src="assets/img03.png" alt="preview" style="width: 3rem" class="me-3">
+                        <div>English Literature.pdf</div>
+                        <div class="ms-auto">3.4 Mb</div>
+                        <div class="ms-3">
+                            <button class="btn btn-sm btn-outline-danger">
+                                <fa-icon [icon]="remove_icon"></fa-icon>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <button type="submit" class="btn btn-sm btn-success me-3">
+            <fa-icon [icon]="upload_icon"></fa-icon>
+            Upload
+        </button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">Clear</button>
+    </form>
+
+</div>

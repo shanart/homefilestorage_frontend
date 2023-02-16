@@ -10,7 +10,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        <img src="https://cdn2.iconfinder.com/data/icons/avatars-99/62/avatar-370-456322-512.png" alt="" class="user-avatar">
+                        <img src="https://cdn2.iconfinder.com/data/icons/avatars-99/62/avatar-370-456322-512.png" alt=""
+                            class="user-avatar">
                         username
                     </a>
                     <ul class="dropdown-menu account-dropdown">
@@ -19,7 +20,12 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><button class="dropdown-item" (click)="sign_out()">logout</button></li>
+                        <li>
+                            <button class="dropdown-item" (click)="sign_out()">
+                                logout
+                                <fa-icon [icon]="icon_signout" class="ms-1"></fa-icon>
+                            </button>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -29,14 +35,22 @@
 <div class="dashboard">
     <div class="dashboard-sidebar bg-body-secondary border-end d-flex flex-column justify-content-between">
         <div class="list-group rounded-0">
-            <a class="list-group-item list-group-item-action list-group-item-secondary border-end-0 text-black" href="#">your files</a>
-            <a class="list-group-item list-group-item-action list-group-item-secondary border-end-0 text-black" href="#">books</a>
-            <a class="list-group-item list-group-item-action list-group-item-secondary border-end-0 text-black" href="#">motes</a>
-            <a class="list-group-item list-group-item-action list-group-item-secondary border-end-0 text-black" href="#">calendar</a>
-            <a class="list-group-item list-group-item-action list-group-item-secondary border-end-0 text-black" href="#">storage<br>health</a>
+            <a class="list-group-item list-group-item-action list-group-item-secondary border-end-0 text-black"
+                href="#">your files</a>
+            <a class="list-group-item list-group-item-action list-group-item-secondary border-end-0 text-black"
+                href="#">books</a>
+            <a class="list-group-item list-group-item-action list-group-item-secondary border-end-0 text-black"
+                href="#">motes</a>
+            <a class="list-group-item list-group-item-action list-group-item-secondary border-end-0 text-black"
+                href="#">calendar</a>
+            <a class="list-group-item list-group-item-action list-group-item-secondary border-end-0 text-black"
+                href="#">storage<br>health</a>
         </div>
         <div class="list-group rounded-0">
-            <button (click)="sign_out()" class="list-group-item text-start bg-transparent">logout</button>
+            <button (click)="sign_out()" class="list-group-item text-start bg-transparent">
+                logout
+                <fa-icon [icon]="icon_signout" class="ms-1"></fa-icon>
+            </button>
         </div>
     </div>
     <div class="dashboard-content">

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { StorageFolder } from '../models';
+import { StorageFolder } from '../../models';
 
 @Component({
   selector: 'tr[storage_folder_item]',

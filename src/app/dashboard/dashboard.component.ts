@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
     selector: 'app-dashboard',
@@ -7,6 +9,7 @@ import { Router } from '@angular/router';
     styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
+    icon_signout = faSignOutAlt;
     theme: "light" | "dark" = "light";
     constructor(private router: Router) { }
 

@@ -4,17 +4,15 @@ import { DashboardRouterModule } from "./dashboard-routing.module";
 import { DashboardComponent } from './dashboard.component';
 import { StorageComponent } from './storage/storage.component';
 import { ListComponent } from './storage/list/list.component';
-import { ItemComponent } from './storage/item/item.component';
+import { ItemComponent } from './storage/list/item/item.component';
 import { SearchComponent } from './storage/search/search.component';
 import { StorageService } from "./storage/services/storage.service";
-import { FilterComponent } from './storage/filter/filter.component';
-import { FolderItemComponent } from './storage/folder-item/folder-item.component';
+import { FilterComponent } from './storage/list/filter/filter.component';
+import { FolderItemComponent } from './storage/list/folder-item/folder-item.component';
 import { RouterModule } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
-
-
-
-
+import { UploadComponent } from './storage/upload/upload.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -25,13 +23,15 @@ import { ReactiveFormsModule } from "@angular/forms";
         ItemComponent,
         SearchComponent,
         FilterComponent,
-        FolderItemComponent
+        FolderItemComponent,
+        UploadComponent
     ],
     imports: [
         CommonModule,
         RouterModule,
         ReactiveFormsModule,
-        DashboardRouterModule
+        DashboardRouterModule,
+        FontAwesomeModule
     ],
     providers: [
         StorageService
