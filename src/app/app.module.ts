@@ -9,6 +9,7 @@ import { metaReducers, reducers } from './app.reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AuthModule } from './auth/auth.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ),
     StoreRouterConnectingModule.forRoot(),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    FontAwesomeModule
+    FontAwesomeModule,
+    EffectsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
